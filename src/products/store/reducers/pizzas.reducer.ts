@@ -57,12 +57,38 @@ export function reducer(
         loaded: false
       };
     }
+
+    case fromPizzas.UPDATE_PIZZA_SUCCESS:
+    case fromPizzas.CREATE_PIZZA_SUCCESS:  {
+      const pizza = action.payload;
+      const entities = {
+        ...state.entities,
+        [pizza.id]: pizza
+      };
+
+      return {
+        ...state,
+        entities
+      };
+    }
+
+    case fromPizzas.REMOVE_PIZZA_SUCCESS: {
+      const pizza = action.payload;
+      // using destructuring to remove the specific pizza
+      const { [pizza.id]: removed, ...entities } = state.entities;
+
+      return {
+        ...state,
+        entities
+      };
+    }
+
   }
 
   return state;
 }
 
-// selector functions
+// selector functions - for selecting specific slices of state
 export const getPizzaEntities = (state: PizzaState) => state.entities;
 export const getPizzasLoading = (state: PizzaState) => state.loading;
 export const getPizzasLoaded = (state: PizzaState) => state.loaded;

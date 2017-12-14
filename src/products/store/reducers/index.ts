@@ -13,6 +13,7 @@ export const reducers: ActionReducerMap<ProductsState> = {
   toppings: fromToppings.reducer
 };
 
+// 'products' refers to StoreModule.forFeature('products', reducers) in ProductsModule
 export const getProductsState = createFeatureSelector<ProductsState>(
   'products'
 );
