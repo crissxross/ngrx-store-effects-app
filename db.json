@@ -147,6 +147,44 @@
         }
       ],
       "id": 3
+    },
+    {
+      "name": "Veggie",
+      "toppings": [
+        {
+          "id": 5,
+          "name": "mozzarella"
+        },
+        {
+          "id": 12,
+          "name": "tomato"
+        },
+        {
+          "id": 6,
+          "name": "mushroom"
+        },
+        {
+          "id": 7,
+          "name": "olive"
+        },
+        {
+          "id": 3,
+          "name": "basil"
+        },
+        {
+          "id": 11,
+          "name": "sweetcorn"
+        },
+        {
+          "id": 8,
+          "name": "onion"
+        },
+        {
+          "id": 9,
+          "name": "pepper"
+        }
+      ],
+      "id": 4
     }
   ]
 }
